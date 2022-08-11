@@ -12,13 +12,13 @@ router.get('/threeRecentEvents', (req, res) => {
 });
 
 router.post('/events', (req, res) => {
+    res.status(200).send("Event received successfully!");
     if(mostRecentRequests.length < 3){
         mostRecentRequests.push(req.body);
     }else{
         mostRecentRequests.shift()
         mostRecentRequests.push(req.body)
     }
-    res.status(200).send("Event received successfully!");
 })
 
 export default router;
