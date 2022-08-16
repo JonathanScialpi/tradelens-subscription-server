@@ -1,11 +1,6 @@
-import fs from "fs";
-import https from "https";
+require('dotenv').config();
 import express from "express";
-import ghana from "./routes/ghana-route"
-// const credentials = {
-//   key: fs.readFileSync('./https-files/key.pem'),
-//   cert: fs.readFileSync('./https-files/cert.pem')
-// };
+import ghana from "./routes/ghana-route";
 
 const app = express();
 
