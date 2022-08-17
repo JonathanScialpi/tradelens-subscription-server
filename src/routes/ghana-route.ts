@@ -25,20 +25,13 @@ router.get('/lastTenEvents', (req, res) => {
 
 router.post('/events', (req, res) => {
     res.status(200).send("Event received successfully!");
-    const eventDoc = {
-        "type": "event",
-        "userid": "abc123",
-        "eventType": "addedToBasket",
-        "productId": "1000042",
-        "date": "2019-01-28T10:44:22.000Z"
-      };
-      
+
+    req.body.forEach(event => {
       service.postDocument({
         db: 'tradelens-subscription-events',
-        document: eventDoc
-      }).then(response => {
-        console.log(response.result);
+        document: event
       });
+    });    
 })
 
 export default router;
