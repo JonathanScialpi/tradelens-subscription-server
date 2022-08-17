@@ -23,6 +23,15 @@ router.get('/lastTenEvents', (req, res) => {
       });
 });
 
+router.get('/allEvents', (req, res) => {
+  service.postAllDocs({
+      db: 'tradelens-subscription-events',
+      includeDocs: true,
+    }).then(response => {
+      res.status(200).send(response.result);
+    });
+});
+
 router.post('/events', (req, res) => {
     res.status(200).send("Event received successfully!");
 
