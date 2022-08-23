@@ -157,10 +157,10 @@ export default router;
 1. Create a [CodeEngine project](https://cloud.ibm.com/codeengine/overview) which points to your pushed image in ICR.
 2. Under configuration create a registry access secret:
 - Registry Source: **Custom**
-- Registry Name: **<YourRegistry>**
+- Registry Name: **< YourRegistry >**
 - Registry Server: **"icr.io"**
 - Username: **"iamapikey"**
-- Password: **<yourapikey>**
+- Password: **< yourapikey >**
 - Email: **Your IBM Cloud Email**
 3. Listening port should be set to what you have in your app.js / dockerfile (3001)
 4. Under environment variables add the two variables we have in our project's .env file.
