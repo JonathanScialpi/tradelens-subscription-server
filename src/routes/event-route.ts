@@ -10,7 +10,7 @@ const service = new CloudantV1({ authenticator: authenticator });
 service.setServiceUrl(process.env.CLOUDANT_URL);
 
 router.get('/test', (req, res) => {
-    res.status(200).send("hello from Ghana Events!");
+    res.status(200).send("hello from Events Route!");
 });
 
 router.get('/lastTenEvents', (req, res) => {
