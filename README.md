@@ -170,5 +170,5 @@ export default router;
 ## Step 7 - Create Tradelens Webhook Subscription
 1. Login to Tradelens
 2. Follow this click path to create a subscription: **Account -> Subscriptions -> Create New Subscription -> Organization Subscription**
-3. Enter a Name, Set URI equal to https://your_apps_endpoint/events, and select a set of event types to receive.
+3. Enter a Name, Set URI equal to https://your_apps_endpoint/api/events, and select a set of event types to receive.
 4. Sit back and watch your Cloudant DB receive events :)
