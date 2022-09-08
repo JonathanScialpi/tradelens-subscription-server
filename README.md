@@ -133,12 +133,15 @@ router.post('/events', (req, res) => {
 
 export default router;
 ```
-8. Rebuild your server and run it:  
+8. Install IBM Cloudant dependencies from the root directory:  
+`npm i @ibm-cloud/cloudant`
+`npm i ibm-cloud-sdk-core`
+9. Rebuild your server and run it:  
 `npx tsc`  
 `node dist/app.js`
-9. Test your new cloudant endpoint with the postman collection:
+10. Test your new cloudant endpoint with the postman collection:
 [Local - Send Event](./postman_collection)
-10. After running the Send Event POST request your Cloudant Database Dashboard should show an entry similar to:
+11. After running the Send Event POST request your Cloudant Database Dashboard should show an entry similar to:
 ![Cloudant DB Entry](./cloudantEvent.png)
 
 ## Step 5 - Dockerize Your Application and Push to ICR
