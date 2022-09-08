@@ -134,7 +134,7 @@ router.post('/events', (req, res) => {
 export default router;
 ```
 8. Install IBM Cloudant dependencies from the root directory:  
-`npm i @ibm-cloud/cloudant`
+`npm i @ibm-cloud/cloudant`  
 `npm i ibm-cloud-sdk-core`
 9. Rebuild your server and run it:  
 `npx tsc`  
